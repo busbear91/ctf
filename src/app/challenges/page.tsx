@@ -152,7 +152,7 @@ export default function ChallengesPage() {
           <div className="text-center py-24 space-y-4">
             <Lock className="w-10 h-10 text-text-muted mx-auto" strokeWidth={1.5} />
             <p className="text-text-primary font-medium" style={{ fontFamily: 'var(--font-display)' }}>
-              Event hasn't started yet
+              Event hasn&apos;t started yet
             </p>
             <p className="text-text-secondary text-sm">
               Challenges will unlock once the admin starts the event timer.
