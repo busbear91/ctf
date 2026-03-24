@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CyDef CTF – Q3 Login Portal</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0a0a0f; color: #e8e8f0; font-family: monospace; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+  .card { background: #13131f; border: 1px solid #1e1e2e; border-radius: 8px; padding: 2rem; width: 340px; text-align: center; }
+  h1 { color: #e63946; font-size: 1.2rem; margin-bottom: 0.5rem; }
+  p { color: #8888aa; font-size: 0.85rem; margin-bottom: 1.5rem; }
+  button { background: #e63946; color: white; border: none; border-radius: 6px; padding: 0.75rem 2rem; font-size: 0.9rem; cursor: pointer; font-family: monospace; }
+  button:hover { background: #ff4d5a; }
+  #flag { display: none; margin-top: 1.5rem; background: #003322; border: 1px solid #00ff8840; border-radius: 6px; padding: 1rem; color: #00ff88; font-size: 1rem; word-break: break-all; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>Admin Portal</h1>
+  <p>This button is only for admins. You definitely can't click it.</p>
+  <button disabled onclick="document.getElementById('flag').style.display='block'">
+    🔒 Admin Only
+  </button>
+  <div id="flag">FLAG{INSPECT_UNLOCKS_SECRETS}</div>
+</div>
+</body>
+</html>

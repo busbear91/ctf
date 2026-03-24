@@ -1,0 +1,3 @@
+Place your favicon.ico here.
+You can generate one at: https://favicon.io/favicon-generator/
+Suggested: text "CF", font Orbitron, background #e63946, color #ffffff

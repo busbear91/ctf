@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CyDef CTF – Q10 Final Boss</title>
+<!-- CLUE: TVNITntqdnRpcHVsX2Z2YnlfdWxkX3pycHNzen0= -->
+<style>
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:#0a0a0f; color:#e8e8f0; font-family:monospace; display:flex; align-items:center; justify-content:center; min-height:100vh; }
+  .card { background:#13131f; border:1px solid #1e1e2e; border-radius:8px; padding:2rem; width:440px; text-align:center; }
+  h1 { color:#e63946; font-size:1.2rem; margin-bottom:0.75rem; }
+  p { color:#8888aa; font-size:0.85rem; line-height:1.7; margin-bottom:0.75rem; }
+  .step { color:#44445a; font-size:0.75rem; text-align:left; background:#0f0f1a; border:1px solid #1e1e2e; border-radius:4px; padding:0.75rem; margin-top:1rem; line-height:1.8; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>⚔ The Final Challenge</h1>
+  <p>This page holds a secret. It won't be found by simply looking at it — you'll need to <em>inspect</em> it.</p>
+  <div class="step">
+    Step 1: Open Inspect Element → Elements tab<br>
+    Step 2: Look for an HTML comment (starts with &lt;!--)<br>
+    Step 3: Base64 decode the string inside<br>
+    Step 4: Caesar decrypt the result with shift 7
+  </div>
+</div>
+</body>
+</html>

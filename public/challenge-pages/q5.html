@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CyDef CTF – Q5 Member Area</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0a0a0f; color: #e8e8f0; font-family: monospace; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+  .card { background: #13131f; border: 1px solid #1e1e2e; border-radius: 8px; padding: 2rem; width: 400px; text-align: center; }
+  h1 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+  p { color: #8888aa; font-size: 0.85rem; margin-bottom: 1rem; line-height: 1.6; }
+  #content { margin-top: 1.5rem; padding: 1rem; border-radius: 6px; font-size: 0.9rem; }
+  .admin { background: #003322; border: 1px solid #00ff8840; color: #00ff88; }
+  .user { background: #1e1e2e; border: 1px solid #2e2e4e; color: #8888aa; }
+</style>
+<script>
+  function getCookie(name) {
+    const v = document.cookie.split(';').map(c => c.trim()).find(c => c.startsWith(name + '='));
+    return v ? v.split('=')[1] : null;
+  }
+  function checkAccess() {
+    const role = getCookie('role');
+    const el = document.getElementById('content');
+    if (role === 'admin') {
+      el.className = 'admin';
+      el.innerHTML = '🚩 Admin access granted!<br><br><strong>FLAG{COOKIES_ARE_CRUMBLY}</strong>';
+    } else {
+      el.className = 'user';
+      el.innerHTML = '🔒 You are logged in as: <strong>' + (role || 'guest') + '</strong><br>Admin access required to see the flag.';
+      if (!role) document.cookie = 'role=user; path=/challenge-pages/q5.html';
+    }
+  }
+  window.onload = checkAccess;
+</script>
+</head>
+<body>
+<div class="card">
+  <h1>Member Area</h1>
+  <p>This area is restricted to admin users only. Regular users can only see a placeholder.</p>
+  <p style="color:#44445a; font-size:0.75rem;">Tip: your access level is stored somewhere in your browser...</p>
+  <div id="content"></div>
+</div>
+</body>
+</html>
